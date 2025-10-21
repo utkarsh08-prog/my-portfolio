@@ -30,7 +30,7 @@ function TypewriterRole({ roles = ["MERN Stack Developer", "Graphic Designer"], 
   }, [display, typing, roleIdx, roles, speed, pause]);
 
   return (
-    <span className="text-fuchsia-400 inline-block md:min-w-[450px] lg:min-w-[550px] overflow-hidden whitespace-nowrap">{display}<span className="animate-pulse">|</span></span>
+    <span className="text-fuchsia-400 inline-block min-w-[200px] sm:min-w-[300px] md:min-w-[400px] lg:min-w-[450px] overflow-hidden whitespace-nowrap">{display}<span className="animate-pulse">|</span></span>
   );
 }
 
@@ -43,24 +43,31 @@ export default function NeonLanding() {
   const [scrollTop, setScrollTop] = useState(0);
   const [showSplash, setShowSplash] = useState(true);
   const [splashExit, setSplashExit] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+  
+  // Fix SSR/hydration issues
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+  
   // Pre-calculate star positions only once
   const [shootingStars] = useState(() =>
-    Array.from({ length: 3 }, () => ({
+    typeof window !== 'undefined' ? Array.from({ length: 3 }, () => ({
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
       x2: Math.random() * window.innerWidth - 100,
       y2: Math.random() * window.innerHeight + 100,
       duration: Math.random() * 6 + 6, // longer duration
-    }))
+    })) : []
   );
   const [floatingStars] = useState(() =>
-    Array.from({ length: 10 }, () => ({
+    typeof window !== 'undefined' ? Array.from({ length: 10 }, () => ({
       width: Math.random() * 2 + 1,
       height: Math.random() * 2 + 1,
       top: Math.random() * 100,
       left: Math.random() * 100,
       duration: Math.random() * 10 + 8, // longer duration
-    }))
+    })) : []
   );
 
   // Email copy fallback if mail client isn't configured
