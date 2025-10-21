@@ -283,7 +283,6 @@ export default function NeonLanding() {
             className="flex-1 md:-mt-12 lg:-mt-16"
           >
           <motion.h1
-            style={{ y: yMove, rotateY: rotate, scale: scale }}
             className="text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight md:min-h-[100px] lg:min-h-[120px]"
           >
             <span className="uppercase">{cv.name || 'Utkarsh'}</span> <span className="hidden sm:inline sm:ml-2">—</span> <span className="block sm:inline mt-2 sm:mt-0"><TypewriterRole roles={[
