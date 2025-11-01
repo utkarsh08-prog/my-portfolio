@@ -59,6 +59,14 @@ export const cv = {
       live: '',
       github: '',
     },
+    {
+      title: 'Music Player',
+      tag: 'Frontend',
+      desc: 'A responsive web music player with playlist support, audio visualizer, and keyboard controls. Built with modern web audio APIs and React for smooth UX.',
+      tech: ['React', 'Howler.js', 'Web Audio API', 'Tailwind CSS'],
+      live: '',
+      github: '',
+    },
   ],
   experience: [
     // {
