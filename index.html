@@ -61,6 +61,15 @@
     </script>
 </head>
   <body>
+    <!-- Hidden H1 for crawlers (visible to bots / assistive tech but kept visually hidden) -->
+    <h1 style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Utkarsh — MERN Stack Developer & Full Stack Engineer</h1>
+
+    <!-- Lightweight internal links to help crawlers discover key sections quickly -->
+    <nav aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+      <a href="#work">Featured Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
