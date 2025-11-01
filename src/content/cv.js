@@ -49,7 +49,7 @@ export const cv = {
       desc: 'Complete e-commerce platform with product catalog, cart, and checkout flow.',
       tech: ['React', 'Node.js', 'Express', 'MongoDB'],
       live: '',
-      github: 'https://github.com/utkarsh/ecommerce-site',
+      github: '',
     },
     {
       title: 'Portfolio Website',
